@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsive.css">
+  <!-- font awsome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <nav class="hStack iCenter">
+    <a hre="#">
+      <img src="https://preview.colorlib.com/theme/aroma/img/logo.png" alt="">
+    </a>
+    <div class="bars vStack absolute cursor-pointer">
+      <span class="bar transition bar1 bg1"></span>
+      <span class="bar transition bar2 bg1"></span>
+      <span class="bar transition bar3 bg1"></span>
+    </div>
+    <div class="responsive-nav zIndex bg2 absolute wFull vStack gap2 transition">
+      <ul class="vStack gap3 menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="right d-flex iCenter">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping relative">
+            <small class="num d-flex jCenter iCenter absolute bg1">3</small>
+          </i>
+        </div>
+        <button class="btn btn1 transition">Buy Now</button>
+      </div>
+    </div>
+  </nav>
+</header>
+  <!-- header -->
+<!-- hero section -->
+<div class="hero-section d-flex bg2 iCenter gap1 ">
+  <div class="hero-part1 relative">
+      <div class="herobgBox bg1"></div>
+      <img class="absolute zIndex" src="https://preview.colorlib.com/theme/aroma/img/home/hero-banner.png" alt="">
+    </div>
+    <div class="hero-part2 vStack ">
+        <p class="gray" style="font-size: 30px;">Shop is fun</p>
+        <h1 class="heroHead">BROWSE OUR <span>PREMIUM PRODUCT</span></h1>
+        <p class="gray">Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass</p>
+        <a class="btn btn2 transition" href="#">Browse Now</a>
+    </div> 
+  </div>
+  <!-- hero section -->
+  <!-- animCards -->
+  <div class="animCards containar hStack jCenter gap1"></div>
+  <!-- animCards -->
+  <!-- ProductsCards -->
+
+  <div class="containar">
+    <h4 class="gray">Popular Item in the market</h4>
+    <h1 class="Trade">Trending <span>Product</span></h1>
+    <div class="card_container" id="cardList1"></div>
+ </div>
+  <!-- ProductsCards -->
+
+ <!-- offer -->
+ <div class="offer">
+  <div class="box0">
+    <h1>Up To 50% Off</h1>
+    <h3>Winter Sale</h3>
+    <p>Him she'd let them sixth saw light</p>
+    <div>
+    <a class="btn btn3" href="#">Shop Now</a>
+  </div>
+  </div>
+ </div>
+<!-- offer -->
+
+  <!-- ProductsCards -->
+ <div class="containar">
+    <h4 class="gray">Popular Item in the market</h4>
+    <h1 class="Trade">Best <span>Sellers</span></h1>
+    <div class="card_container" id="cardList2"></div>
+ </div>
+  <!-- ProductsCards -->
+
+
+   <!-- latest cards -->
+   <div class="containar">
+    <h4 class="gray">Popular Item in the market</h4>
+    <h1 class="Trade">Latest <span>News</span></h1>
+  <div class="hStack gap5 latestCards"></div>
+  </div>
+  <!-- latest cards -->
+
+  
+   <script src="scripts.js"></script> 
+</body>
+</html>
