@@ -1,13 +1,6 @@
 let bars = document.querySelector(".bars");
 let responsive = document.querySelector(".responsive-nav");
-let a = document.querySelector("#myh1");
-
-bars.addEventListener("click", () => {
-  responsive.classList.toggle("active");
-  Array.from(bars.children).forEach((child) =>
-    child.classList.toggle("active")
-  );
-});
+bars.addEventListener("click", () => responsive.classList.toggle("active"));
 
 const renderCards = (data, container, templateFn) => container.innerHTML = data.map(templateFn).join("");
 
