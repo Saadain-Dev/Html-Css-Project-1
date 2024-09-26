@@ -62,7 +62,7 @@
 
 @media screen and (min-width: 1200px) {
   nav {
-    padding-inline: 13vw;
+    padding-inline-start:5vw;
   }
   .container {
     width: 72vw;
