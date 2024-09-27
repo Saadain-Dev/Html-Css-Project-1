@@ -12,22 +12,25 @@ const headingContainer = document.querySelectorAll(".heading");
 const headingData = [
   {
     desc: "Popular Item in the market",
-    h1: "Trending Products",
+    h1: "Trending",
+    span: "Products",
   },
   {
     desc: "Popular Item in the market",
-    h1: "Best Seller",
+    h1: "Best",
+    span: "Seller",
   },
   {
     desc: "Popular Item in the market",
-    h1: "Latest News",
+    h1: "Latest",
+    span: "News",
   },
 ];
 
 const heading = (item) => {
   return `
     <h4 class="gray">${item.desc}</h4>
-    <h1 class="Trade">${item.h1}</h1>`;
+    <h1 class="Trade">${item.h1} <span class="blue">${item.span}</span></h1>`;
 }
 headingData.forEach((item, index) => {
   headingContainer[index].innerHTML+= heading(item);

@@ -26,6 +26,11 @@
   gap: 20px;
 }
 
+.blue{
+  border-bottom: 2px solid blue;
+  padding: 5px;
+}
+
 img {
   width: 100%;
   object-fit: cover;
