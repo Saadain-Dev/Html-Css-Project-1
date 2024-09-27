@@ -14,11 +14,6 @@
   margin-inline: auto;
 }
 
-.border-line {
-  border-bottom: 3px solid rgb(0, 60, 255);
-  padding-bottom: 8px;
-}
-
 .vStack {
   display: flex;
   flex-direction: column;
@@ -59,20 +54,8 @@ img {
   color: gray;
 }
 
-.gap1 {
-  gap: 10px;
-}
-.gap2 {
-  gap: 20px;
-}
 .gap3 {
   gap: 30px;
-}
-.gap4 {
-  gap: 40px;
-}
-.gap5 {
-  gap: 50px;
 }
 
 .relative {
@@ -104,7 +87,9 @@ img {
   border: 1px solid rgba(194, 192, 192, 0.8);
 }
 .btn:hover {
-  border: 1px solid rgb(136, 134, 134);
+  background: #384aeb;
+  border: 1px solid transparent;
+  color: #fff;
 }
 
 .btn2 {

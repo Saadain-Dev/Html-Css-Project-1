@@ -1,9 +1,39 @@
+// header //
 let bars = document.querySelector(".bars");
 let responsive = document.querySelector(".responsive-nav");
 bars.addEventListener("click", () => responsive.classList.toggle("active"));
+// header //
 
+// Map Funcation //
 const renderCards = (data, container, templateFn) => container.innerHTML = data.map(templateFn).join("");
+// Map Funcation //
+// heading //
+const headingContainer = document.querySelectorAll(".heading");
+const headingData = [
+  {
+    desc: "Popular Item in the market",
+    h1: "Trending Products",
+  },
+  {
+    desc: "Popular Item in the market",
+    h1: "Best Seller",
+  },
+  {
+    desc: "Popular Item in the market",
+    h1: "Latest News",
+  },
+];
 
+const heading = (item) => {
+  return `
+    <h4 class="gray">${item.desc}</h4>
+    <h1 class="Trade">${item.h1}</h1>`;
+}
+headingData.forEach((item, index) => {
+  headingContainer[index].innerHTML+= heading(item);
+});
+
+// Animation Cards //
 const animContainer = document.querySelector(".animCards");
 const animcardsData = [
   {
@@ -37,54 +67,12 @@ const animCards = (item) => {
       </div>
     </div>`;
 };
-
   renderCards(animcardsData, animContainer, animCards);
+// Animation Cards //
 
-let latestCards = document.querySelector(".latestCards");
-let lCardsData =[
-    {
-      img: "https://preview.colorlib.com/theme/aroma/img/blog/blog1.png",
-      heading: "The Richland Center Shopping News and Weekly shooper",
-      desc: "Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.",
-    },
-    {
-      img: "https://preview.colorlib.com/theme/aroma/img/blog/blog2.png",
-      heading: "The Shopping News also offers top-quality printing services",
-      desc: "Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.",
-    },
-    {
-      img: "https://preview.colorlib.com/theme/aroma/img/blog/blog3.png",
-      heading:
-        "Proffessional design staff and efficient equiment you'll find we offer",
-      desc: "Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.",
-    },
-  ];
-
-const latestCard = (item) => {
-  return `
-    <div class="latest-card vStack cursor-pointer">
-      <img src="${item.img}" alt="">
-      <div class="hStack">
-        <p class="gray">By Admin</p>
-        <p class="gray">
-          <i class="fa-solid fa-comment-dots"></i>
-          2 Comments
-        </p>
-      </div>
-      <a href="">${item.heading}</a>
-      <p class="gray">${item.desc}</p>
-      <a href="" class="arrow-btn">
-        Read More
-        <i class="fa-solid fa-arrow-right transition"></i>
-      </a>
-    </div>`;
-};
-
-renderCards(lCardsData, latestCards, latestCard);
-
-
-let card_container = document.querySelector("#cardList1")
-let card_container2 = document.querySelector("#cardList2")
+// Products Cards //
+let card_container = document.querySelectorAll(".card_container");
+console.log(card_container);
 
 let tCards = [
   {
@@ -154,16 +142,50 @@ const productData = (item) =>{
   </div>
   </div>`
 }
+renderCards(tCards,card_container[0],productData);
+renderCards(tCards2,card_container[1],productData);
+// Products Cards //
 
+// Latest Cards //
+let latestCards = document.querySelector(".latestCards");
+let lCardsData =[
+    {
+      img: "https://preview.colorlib.com/theme/aroma/img/blog/blog1.png",
+      heading: "The Richland Center Shopping News and Weekly shooper",
+      desc: "Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.",
+    },
+    {
+      img: "https://preview.colorlib.com/theme/aroma/img/blog/blog2.png",
+      heading: "The Shopping News also offers top-quality printing services",
+      desc: "Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.",
+    },
+    {
+      img: "https://preview.colorlib.com/theme/aroma/img/blog/blog3.png",
+      heading:
+        "Proffessional design staff and efficient equiment you'll find we offer",
+      desc: "Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.",
+    },
+  ];
 
-renderCards(tCards,card_container,productData);
-renderCards(tCards2,card_container2,productData);
+const latestCard = (item) => {
+  return `
+    <div class="latest-card vStack cursor-pointer">
+      <img src="${item.img}" alt="">
+      <div class="hStack">
+        <p class="gray">By Admin</p>
+        <p class="gray">
+          <i class="fa-solid fa-comment-dots"></i>
+          2 Comments
+        </p>
+      </div>
+      <a href="">${item.heading}</a>
+      <p class="gray">${item.desc}</p>
+      <a href="" class="arrow-btn">
+        Read More
+        <i class="fa-solid fa-arrow-right transition"></i>
+      </a>
+    </div>`;
+};
 
-
-
-
-
-
-
-
-
+renderCards(lCardsData, latestCards, latestCard);
+// Latest Cards //
